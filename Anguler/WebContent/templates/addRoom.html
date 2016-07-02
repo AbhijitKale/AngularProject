@@ -1,0 +1,67 @@
+<div class="container"  ng-controller="addRoomCtrl">
+  <div class="row">
+  	<div class="col-md-7">
+    
+          <form class="form-horizontal" action="" method="POST">
+          <fieldset>
+            <div id="legend">
+              <legend class="">Add New Room</legend>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="roomname">Room Name</label>
+              <div class="controls">
+                <input type="text" id="roomname" ng-model="roomData.room_name" name="roomname" placeholder="" class="form-control input-lg">
+                <p class="help-block">Please give name as Ex. : CT1-5-6789</p>
+             
+              </div>
+            </div>
+         
+            <div class="control-group">
+              <label class="control-label" for="capacity">Capacity</label>
+              <div class="controls">
+                 
+                   <select class="form-control" id="sel1" ng-model="roomData.capacity">
+                      <option>10</option>
+                      <option>25</option>
+                      <option>30</option>
+                      <option>50</option>
+                   
+                   </select>
+                    <p class="help-block">Choose capacity of the room</p>
+              </div>
+            </div>
+         
+            <div class="control-group">
+              <label class="control-label" for="location">Location</label>
+              <div class="controls">
+                   
+                   <select class="form-control" id="sel1" ng-model="roomData.location">
+                      <option>Pune</option>
+                      <option>Hyderabad</option>
+                      <option>Gandhinagar</option>
+                   </select>
+                
+                <p class="help-block">Choose the location</p>
+              </div>
+            </div>
+            
+            <div class="control-group">
+              <label ng-repeat="tag in tags">
+                <input type="checkbox" ng-model="tag.enabled" checklist-value="tag.text"> {{tag.text}}
+                &nbsp;
+              </label>
+           </div>
+         
+         <br/>
+            <div class="control-group">
+              <!-- Button -->
+              <div class="controls">
+                <button ng-click="add()" class="btn btn-success">Add Room</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+    
+    </div> 
+  </div>
+</div>

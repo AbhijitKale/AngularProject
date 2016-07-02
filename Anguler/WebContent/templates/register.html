@@ -1,0 +1,80 @@
+<div class="container" style="margin-top: 10px;margin-bottom: 10px;">
+<h3>CRBM Registration</h3>
+
+    <div class="row">
+   
+        <form role="form" ng-submit="close()">
+            <div class="col-lg-6">
+             <hr>
+                <div class="well well-sm"><strong><span class="glyphicon glyphicon-asterisk"></span>Required Field</strong></div>
+                <div class="form-group">
+                    <label for="InputFirstName">First Name</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" ng-model="userData.first_name" name="InputFirstName" id="InputFirstName" placeholder="Ex : Jon" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="InputLastName">Last Name</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" ng-model="userData.last_name" name="InputLastName" id="InputLastName" placeholder="Ex : Snow" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="InputDesignation">Designation</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" ng-model="userData.designation" name="InputDesignation" id="InputDesignation" placeholder="Ex : Manager,Director" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="InputEmail">Email</label>
+                    <div class="input-group">
+                        <input type="email" class="form-control" ng-model="userData.email_id" id="InputEmailFirst" name="InputEmail" placeholder="Ex : johsnow@mail.com" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="InputContact">Contact</label>
+                    <div class="input-group">
+                        <input type="text" maxlength="10" pattern="[789][0-9]{9}" ng-model="userData.contact" class="form-control" id="InputContact" name="InputContact" placeholder="Ex : 9898989898" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="InputAddress">Address</label>
+                    <div class="input-group">
+                        <textarea name="InputAddress" maxlength="100" ng-model="userData.address" id="InputAddress" class="form-control" rows="3" required></textarea>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="InputUsername">Username</label>
+                    <div class="input-group">
+                        <input type="text"  class="form-control" ng-model="userData.username" id="InputUsername" name="InputUsername" placeholder="Ex : jon.snow" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="InputPassword">Password</label>
+                    <div class="input-group">
+                      <input type="password" ng-model="userData.password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                      class="form-control" id="InputPassword" name="InputPassword" placeholder="Password (UpperCase, LowerCase, Number/SpecialChar and min 8 Chars)" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <input type="submit" name="submit" id="submit" value="Submit"  class="btn btn-info pull-right">
+            </div>
+        </form>
+       
+    </div>
+   
+</div>
